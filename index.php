@@ -7,4 +7,8 @@ and call the variable you need.
 require 'config/Config.php';
 use Config\Config;
 
-echo Config::getOauthToken('googles');
+// Store the value of the token if it is found in the settings.json 
+// Otherwise it return an error
+$token = Config::getOauthToken('google');
+
+echo $token;
